@@ -1,6 +1,6 @@
 import { Response } from "express";
 
-const sendResponse = (res: Response, data): void => {
+const sendResponse = (res: Response, data: any): void => {
   const responseData = {
     statusCode: data.statusCode,
     success: data.success,
