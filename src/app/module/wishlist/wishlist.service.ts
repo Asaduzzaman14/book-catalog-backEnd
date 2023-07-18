@@ -6,7 +6,7 @@ const addWishlist = async (paylode: IWishlist): Promise<IWishlist | any> => {
 };
 
 const getWishList = async (): Promise<IWishlist | any> => {
-  const result = await Wishlist.find();
+  const result = await Wishlist.find().populate("bookId");
   return result;
 };
 

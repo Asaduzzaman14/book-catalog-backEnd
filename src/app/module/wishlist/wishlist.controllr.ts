@@ -7,6 +7,7 @@ import { WishlistServices } from "./wishlist.service";
 const addToWishList: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const { ...OrderData } = req.body;
+    console.log(OrderData);
 
     const result = await WishlistServices.addWishlist(OrderData);
 

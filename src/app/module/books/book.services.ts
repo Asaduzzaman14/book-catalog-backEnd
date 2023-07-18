@@ -20,6 +20,7 @@ const getBooks = async (
 ) => {
   const { searchTerm, ...filtersData } = filters;
   const andCondation = [];
+  console.log(searchTerm, filtersData);
 
   if (searchTerm) {
     andCondation.push({
@@ -39,6 +40,7 @@ const getBooks = async (
       })),
     });
   }
+  console.log(andCondation);
 
   const requestCondetion =
     andCondation.length > 0 ? { $and: andCondation } : {};

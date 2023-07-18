@@ -12,7 +12,7 @@ const wishlistSchema = new Schema<IWishlist>(
   {
     bookId: {
       type: Schema.Types.ObjectId,
-      ref: "book",
+      ref: "Book",
     },
     plantoRead: {
       type: Boolean,

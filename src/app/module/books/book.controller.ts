@@ -39,7 +39,7 @@ const getAllBooks: RequestHandler = catchAsync(
       statusCode: httpStatus.OK,
       success: true,
       message: "book retrieved successfully",
-      data: result.data,
+      data: result.data.reverse(),
     });
   }
 );
